@@ -45,6 +45,11 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected successfully'))
   .catch((err) => console.log('MongoDB connection error:', err));
 
+// Health check for Load Balancer and Jenkins deployment
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'UP', timestamp: new Date().toISOString() });
+});
+
 // Test route
 app.get('/', (req, res) => {
   res.send('Interior Design API is running with Session & Cookie Auth');

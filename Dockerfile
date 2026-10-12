@@ -1,22 +1,18 @@
-# Multi-stage production build for Node.js
+# Multi-stage production build for Interior Design Backend
 FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy dependency manifests
-COPY package*.json ./
+# Copy backend package files
+COPY backend/package*.json ./
 
-# Install all dependencies (including devDependencies if needed for build)
+# Install dependencies cleanly
 RUN npm ci
 
-# Copy application source code
-COPY . .
+# Copy backend source code
+COPY backend/ ./
 
-# Build step (if your project has a build script, e.g. TypeScript / Webpack / Next)
-# Uncomment the following line if applicable:
-# RUN npm run build --if-present
-
-# Production runtime stage
+# Production runner stage
 FROM node:20-alpine AS runner
 
 WORKDIR /app
@@ -24,19 +20,17 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=8080
 
-# Install curl for health check
+# Install curl for container health check
 RUN apk --no-cache add curl
 
-# Copy only production dependencies and build artifacts
-COPY package*.json ./
+# Copy only production dependencies and source
+COPY backend/package*.json ./
 RUN npm ci --only=production
 
 COPY --from=builder /app ./
 
-# Expose production port
 EXPOSE 8080
 
-# Run non-root user for container security
 USER node
 
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
