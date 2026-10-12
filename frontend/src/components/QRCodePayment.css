@@ -1,0 +1,295 @@
+/* QRCodePayment.css - Modern Luxury UPI Payment Interface */
+.qr-payment-card {
+  background: #ffffff;
+  border: 1px solid #eae5dc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin: 15px 0 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.04);
+}
+
+.qr-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0ede8;
+}
+
+.qr-bank-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fdfaf6;
+  border: 1px solid #e8e1d5;
+  color: #141414;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.live-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #27ae60;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7);
+  animation: pulse-green 1.8s infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(39, 174, 96, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(39, 174, 96, 0);
+  }
+}
+
+.qr-timer {
+  font-size: 12px;
+  color: #666;
+}
+
+.qr-timer strong {
+  color: #c59d5f;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.qr-amount-banner {
+  background: #faf8f5;
+  border: 1px solid #eae5dc;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qr-amt-label {
+  font-size: 13px;
+  color: #777;
+  font-weight: 600;
+}
+
+.qr-amt-val {
+  font-size: 20px;
+  font-weight: 800;
+  color: #141414;
+}
+
+/* Reticle Camera Frame */
+.qr-frame-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #e5dfd3;
+  margin: 0 auto 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.qr-image {
+  width: 190px;
+  height: 190px;
+  display: block;
+  border-radius: 6px;
+}
+
+.qr-brand-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1a1a;
+  color: #c59d5f;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.qr-reticle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #c59d5f;
+  border-style: solid;
+}
+
+.qr-reticle.top-left {
+  top: 4px;
+  left: 4px;
+  border-width: 2px 0 0 2px;
+}
+
+.qr-reticle.top-right {
+  top: 4px;
+  right: 4px;
+  border-width: 2px 2px 0 0;
+}
+
+.qr-reticle.bottom-left {
+  bottom: 4px;
+  left: 4px;
+  border-width: 0 0 2px 2px;
+}
+
+.qr-reticle.bottom-right {
+  bottom: 4px;
+  right: 4px;
+  border-width: 0 2px 2px 0;
+}
+
+.qr-scan-instruction {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.upi-apps-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.upi-app-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: #f4efe9;
+  color: #333;
+  border: 1px solid #e0d8cc;
+}
+
+.upi-id-copy-box {
+  background: #fdfbf9;
+  border: 1px dashed #c59d5f;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 8px;
+}
+
+.upi-id-info {
+  text-align: left;
+}
+
+.upi-id-label {
+  display: block;
+  font-size: 10px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.upi-id-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #141414;
+  font-family: monospace;
+}
+
+.btn-copy-upi {
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-copy-upi:hover {
+  background: #c59d5f;
+  color: #1a1a1a;
+}
+
+.btn-copy-upi.copied {
+  background: #27ae60;
+  color: #ffffff;
+}
+
+.mobile-deep-link {
+  margin-bottom: 14px;
+}
+
+.btn-mobile-pay {
+  display: inline-block;
+  font-size: 12px;
+  color: #c59d5f;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.qr-confirm-section {
+  border-top: 1px solid #f0ede8;
+  padding-top: 14px;
+  text-align: left;
+}
+
+.utr-input-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.utr-input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #dcd6ce;
+  border-radius: 6px;
+  font-size: 13px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  font-family: monospace;
+}
+
+.btn-qr-submit {
+  width: 100%;
+  padding: 13px;
+  background: #15803d;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.btn-qr-submit:hover {
+  background: #166534;
+}

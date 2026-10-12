@@ -1,0 +1,697 @@
+/* Billing.css - Milestone Billing & Payment Styles */
+.billing-page {
+  min-height: 100vh;
+  background-color: #faf9f6;
+  padding: 40px 20px 80px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+}
+
+.billing-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.billing-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.billing-badge {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #c59d5f;
+  background: #f7efe6;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.billing-header h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #141414;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+}
+
+.billing-subtitle {
+  font-size: 16px;
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Designer Consultation Status Banner */
+.designer-callout {
+  background: #ffffff;
+  border: 1px solid #e2dacd;
+  border-left: 5px solid #c59d5f;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.designer-avatar {
+  width: 50px;
+  height: 50px;
+  background: #1a1a1a;
+  color: #c59d5f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.designer-callout-text h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #141414;
+}
+
+.designer-callout-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Main Grid Layout */
+.billing-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Summary Card */
+.billing-card {
+  background: #ffffff;
+  border: 1px solid #eae6e0;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0ede8;
+  padding-bottom: 14px;
+}
+
+.card-title-row h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #141414;
+}
+
+.project-tag {
+  background: #f4efe9;
+  color: #555;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Progress bar */
+.milestone-progress-box {
+  background: #f9f8f6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.progress-track {
+  height: 10px;
+  background: #e6e2dc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #c59d5f 0%, #27ae60 100%);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Milestones Timeline */
+.milestone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.milestone-item {
+  border: 1px solid #eae6e0;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.milestone-item.active {
+  border-color: #c59d5f;
+  background: #fffdfa;
+  box-shadow: 0 4px 12px rgba(197, 157, 95, 0.12);
+}
+
+.milestone-item.paid {
+  border-color: #27ae60;
+  background: #f7fdf9;
+}
+
+.milestone-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.milestone-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  background: #eee;
+  color: #777;
+}
+
+.milestone-item.paid .milestone-icon {
+  background: #e6f7ed;
+  color: #27ae60;
+}
+
+.milestone-item.active .milestone-icon {
+  background: #1a1a1a;
+  color: #c59d5f;
+}
+
+.milestone-details h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: #141414;
+}
+
+.milestone-details p {
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+}
+
+.milestone-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.milestone-amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #141414;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.status-badge.paid {
+  background: #e6f7ed;
+  color: #27ae60;
+}
+
+.status-badge.due {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.upcoming {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.btn-pay-milestone {
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-pay-milestone:hover {
+  background: #c59d5f;
+  color: #141414;
+}
+
+/* Quick Pay & Cost Overview Sidebar */
+.overview-box {
+  background: #f9f8f6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.overview-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.overview-row:last-child {
+  margin-bottom: 0;
+}
+
+.overview-row.total {
+  border-top: 2px dashed #ded8ce;
+  padding-top: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #141414;
+}
+
+.btn-half-payment-cta {
+  width: 100%;
+  background: #c59d5f;
+  color: #141414;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(197, 157, 95, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-half-payment-cta:hover {
+  background: #b08a4f;
+  transform: translateY(-2px);
+}
+
+.guarantee-note {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.4;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 540px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+}
+
+.modal-header h3 {
+  font-size: 22px;
+  margin: 0 0 6px;
+  color: #141414;
+}
+
+.modal-header p {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Payment Methods */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.payment-method-card {
+  border: 1px solid #dcd6ce;
+  border-radius: 8px;
+  padding: 12px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-method-card.selected {
+  border-color: #c59d5f;
+  background: #fdfaf6;
+  box-shadow: 0 0 0 2px rgba(197, 157, 95, 0.2);
+}
+
+.method-icon {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.method-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Payment Form Fields */
+.modal-form-group {
+  margin-bottom: 16px;
+}
+
+.modal-form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dcd6ce;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal-input:focus {
+  outline: none;
+  border-color: #c59d5f;
+}
+
+/* QR Code Section */
+.qr-container {
+  background: #fdfaf6;
+  border: 1px dashed #c59d5f;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.qr-box {
+  width: 130px;
+  height: 130px;
+  background: #ffffff;
+  border: 1px solid #e0dbd3;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.upi-id-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #141414;
+}
+
+.btn-confirm-pay {
+  width: 100%;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-confirm-pay:hover {
+  background: #333;
+}
+
+/* Receipt Preview Modal */
+.receipt-box {
+  border: 1px solid #eae6e0;
+  border-radius: 10px;
+  padding: 24px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #141414;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.receipt-brand h4 {
+  margin: 0 0 2px;
+  font-size: 18px;
+  color: #141414;
+}
+
+.receipt-badge {
+  background: #e6f7ed;
+  color: #27ae60;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.receipt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.receipt-grid span {
+  color: #777;
+  display: block;
+}
+
+.receipt-grid strong {
+  color: #141414;
+}
+
+.receipt-amount-banner {
+  background: #f7f5f1;
+  padding: 14px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Transaction History Table */
+.history-section {
+  margin-top: 30px;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.history-table th {
+  text-align: left;
+  background: #f4efe9;
+  padding: 12px 14px;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.history-table td {
+  padding: 14px;
+  border-bottom: 1px solid #f0ede8;
+  color: #333;
+}
+
+.btn-view-receipt {
+  background: none;
+  border: 1px solid #c59d5f;
+  color: #c59d5f;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-view-receipt:hover {
+  background: #c59d5f;
+  color: #141414;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .billing-layout {
+    grid-template-columns: 1fr;
+  }
+  .billing-header h1 {
+    font-size: 28px;
+  }
+}
+
+/* Billing Top Tab Switcher */
+.billing-tab-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.billing-tab-btn {
+  background: #ffffff;
+  border: 1px solid #dcd6ce;
+  color: #555;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.billing-tab-btn:hover {
+  background: #f5f2ec;
+  border-color: #c59d5f;
+}
+
+.billing-tab-btn.active {
+  background: #1a1a1a;
+  color: #ffffff;
+  border-color: #1a1a1a;
+}
+
+.billing-tab-count {
+  background: #c59d5f;
+  color: #1a1a1a;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+/* Item Order Cells & Pills */
+.item-order-thumb-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-order-mini-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #eae6e0;
+}
+
+.status-pill.processing {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-pill.dispatched {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-pill.delivered {
+  background: #d1fae5;
+  color: #047857;
+}
+
