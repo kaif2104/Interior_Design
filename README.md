@@ -1,7 +1,8 @@
 # 🏗️ Production Multi-Server DevSecOps Environment on AWS EC2
 
 An enterprise-grade, shift-left DevSecOps architecture running on AWS EC2. This repository demonstrates automated secret scanning, Static Application Security Testing (SAST), Docker multi-stage release pipelines, sequential zero-downtime rolling deployments, automated database migrations, real-time telemetry (Prometheus & Grafana), and autonomous SRE self-healing watchdogs.
-'/Users/mohammedkaifdudhwala/Desktop/Untitled - Visual 1.jpg'
+<img width="694" height="540" alt="Untitled - Visual 1" src="https://github.com/user-attachments/assets/b9e3001c-95e1-4774-b2c5-53b8690dafcf" />
+
 
 ## 🖥️ Server Inventory & Infrastructure Specs
 
